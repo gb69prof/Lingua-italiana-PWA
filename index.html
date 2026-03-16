@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12324a">
+  <meta name="description" content="PWA didattica sulla storia della lingua italiana e il suo uso corretto.">
+  <title>Storia della lingua italiana</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SL</div>
+        <div>
+          <h1>Storia della lingua italiana</h1>
+          <p>Micro-lezioni integrali</p>
+        </div>
+      </div>
+      <div class="sidebar-actions">
+        <input id="searchInput" type="search" placeholder="Cerca una lezione..." aria-label="Cerca una lezione">
+      </div>
+      <nav id="lessonNav" class="lesson-nav"></nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="menu-btn" aria-label="Apri indice">☰</button>
+        <div>
+          <p class="eyebrow">PWA offline</p>
+          <h2 id="pageTitle">Introduzione</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="installBtn" class="ghost" hidden>Installa</button>
+        </div>
+      </header>
+
+      <section id="homeView" class="home-view">
+        <div class="hero card">
+          <p class="eyebrow">Materiale originale segmentato</p>
+          <h3>31 micro-lezioni in formato PWA</h3>
+          <p>Ogni unità conserva il testo integrale e la pagina originale come immagine. Nessuna riduzione, nessuna riscrittura.</p>
+        </div>
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <article id="lessonView" class="lesson-view card" hidden>
+        <div id="lessonMeta" class="lesson-meta"></div>
+        <div id="lessonContent" class="lesson-content"></div>
+      </article>
+    </main>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
